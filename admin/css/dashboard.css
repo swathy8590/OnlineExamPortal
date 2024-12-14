@@ -1,0 +1,49 @@
+.dashbox {
+  height: 191px;
+  background-color: var(--question-box);
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #b6b2b2;
+  text-align: center;
+  color: rgb(29, 28, 28) !important;
+
+}
+
+.e-total {
+  background-color: var(--total-exam);
+  color: rgb(29, 28, 28);
+}
+
+
+.e-attent {
+  background-color: var(--exam-attent);
+  color: rgb(255, 255, 255) !important;
+}
+
+
+
+.presantage-box {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px #b6b2b2;
+  overflow: hidden;
+
+
+}
+
+.bar-chart {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+
+}
+
+
+
+.line-chart {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+
+}
+
+.chartmain {
+  overflow: hidden;
+}

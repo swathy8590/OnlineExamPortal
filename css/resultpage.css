@@ -1,0 +1,243 @@
+:root {
+    --text-color: #7D83E1;
+    --heading-text-color: #5860CF;
+    --white: #ffffff;
+    --gray: #EFEFEF;
+}
+
+
+.headersec {
+
+    height: 100px;
+    background: var(--heading-text-color);
+}
+
+.headingmain {
+    color: var(--white);
+    text-align: center;
+}
+
+
+.bodysec {
+    background-color: #eef2f7 !important;
+    height: 100vh;
+}
+
+.questionmain {
+    height: 90vh;
+}
+
+.presantage {
+    height: 400px;
+    background: var(--white);
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.name {
+    height: 100px;
+    background: var(--white);
+    border-radius: 20px;
+}
+
+.textmaincolor {
+    color: var(--heading-text-color);
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1b57;
+
+
+}
+
+
+.textcolor {
+    color: #3B3B98;
+}
+
+.grade {
+    height: 274px;
+    background: var(--white);
+    border-radius: 20px;
+}
+
+
+.detailsmain {
+    height: 100px;
+}
+
+
+
+.presantagemain[role="progressbar"] {
+    --size: 12rem;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+        conic-gradient(var(--heading-text-color) calc(var(--pgPercentage) * 1%), var(--gray) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--heading-text-color);
+}
+
+.presantagemain[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+}
+
+
+/* .presantagemain::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.2;
+} */
+
+.progress-bar {
+    background-color: #3f9a9f;
+}
+
+/* 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        } */
+
+/* .headersec {
+    background-color: #1d1b57;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.headersec h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.bodysec {
+    padding: 40px 15px;
+}
+
+.questionmain {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.name h5 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+.name p {
+    font-size: 18px;
+    color: #888;
+}
+
+.grade h6,
+.detailsmain h6 {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.grade h4,
+.detailsmain h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1b57;
+}
+
+.presantagemain {
+    background: linear-gradient(135deg, #6e7f9f, #4a90e2);
+    border-radius: 12px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.presantagemain h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.presantagemain h5 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.presantagemain::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.progress-bar {
+    background-color: #3f9a9f;
+}
+
+.questionmain .detailsmain {
+    margin-top: 20px;
+}
+
+.questionmain .detailsmain .col {
+    text-align: center;
+}
+
+.questionmain .detailsmain .col h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-retry {
+    background-color: #f38c28;
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-retry:hover {
+    background-color: #d0771d;
+}
+
+@media (max-width: 768px) {
+    .questionmain {
+        flex-direction: column;
+    }
+} */

@@ -1,0 +1,56 @@
+:root {
+    --primary-color: #5860CF;
+    --secondary-color: #ffffff;
+
+}
+
+
+
+.main {
+    height: 700px;
+    background: var(--primary-color);
+}
+
+.pagemain {
+    height: 100vh;
+    padding: none;
+}
+
+.sloginpage {
+    height: 500px;
+    background: var(--secondary-color);
+    border-radius: 30px;
+    position: relative;
+}
+
+
+
+.round {
+    border-radius: 55px;
+    width: 113px;
+    height: 113px;
+    background: var(--secondary-color);
+    position: absolute;
+    right: -41px;
+    top: -42px;
+    box-shadow: black 0px 0px 4px;
+}
+
+.sloginhead {
+    text-align: center;
+}
+
+
+.signinbutton {
+    background: var(--primary-color) !important;
+    border-radius: 20px !important;
+}
+
+
+
+@media screen and (max-width:576px) {
+    .round {
+        display: none;
+    }
+
+}
