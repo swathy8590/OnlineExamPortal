@@ -234,7 +234,7 @@ $edit_data = $question->edit();
 
       <script>
         $('#index').DataTable({
-          data: <?php echo $data; ?>,
+          data: <?php echo ucfirst($data); ?>,
           columns: [{
               data: 'id'
             },

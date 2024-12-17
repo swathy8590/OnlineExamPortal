@@ -71,7 +71,7 @@ if (isset($_SESSION['dlt_message'])) {
 
                       </div>
                       <!-- Save changes button-->
-                      <button class="btn savechanges" type="submit" name="cls_edit" value="' . $data['class'] . '">Save </button>
+                      <button class="btn savechanges" type="submit" name="cls_edit" value="' . $_POST['edit'] . '">Save </button>
                     </form>
                   </div>
                   </div>

@@ -1,14 +1,18 @@
 :root {
   --body-color: #e4e9f9;
-  --question-box: #B3C6FC;
-  --total-exam: #FFEFE2;
-  --exam-attent: #1C1B20;
+  --question-box: #E3F2FD;
+  --total-exam: #FFE8D6;
+  --exam-attent: #F5F5F5;
   --primary-color: #ffffff;
   --gray: #ECF2FF;
   --presantage-color: #606BF7;
   --text-color: #424243;
   --bar-chart: #bcb9f1;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @font-face {
   font-family: "plus-sans";
@@ -62,17 +66,91 @@ body {
 }
 
 
-.logo {
+/* .logo {
   height: 64px;
-  padding: 15px;
+  padding: 11px 2px 6px 21px;
   font-size: 24px;
   font-weight: 600;
   border-bottom: 1px solid #ececec;
-}
+  /* background-image: url("../images/photo.png");
+  background-size: cover; */
+/* text-align: center; */
+
+/* } */
+
+
+/* 
+
 
 .logo span {
-  color: #3c23c8;
+  font-size: 21px;
+} */
+
+
+
+
+/* Logo container */
+.logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 16px;
+  /* Space between icon and text */
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid #ececec;
+  /* Modern font */
 }
+
+
+.logo-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+
+.logo-text .logo-e {
+  color: #1E3A8A;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+.logo-text .logo-e {
+  background: #606BF7;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text span {
+  background: #606BF7;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width: 768px) {
+  .logo-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
+
+
+
 
 .side-navbar {
   width: 250px;
@@ -164,12 +242,6 @@ body {
   color: #ffffff;
 }
 
-
-/* .nav-link:active,
-.nav-link:focus,
-.nav-link:hover {
-  background-color: #ffffff26;
-} */
 
 .my-container {
   transition: 0.4s;
@@ -288,17 +360,6 @@ body {
   color: #3c23c8;
 }
 
-
-/* .action-buttons {
-  display: flex;
-  gap: 10px;
-} */
-
-/* .action-buttons a {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-} */
 
 
 
