@@ -42,14 +42,16 @@ $subject = $_SESSION['subject'];
         <div class="row main">
             <div class="col bodysec ">
                 <div class="row justify-content-center align-items-center questionmain">
+                    <h2 class="text-center head-exam">EXAM PORTAL</h2>
                     <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-6">
-                        <h2 class="text-center">EXAM PORTAL</h2>
-                        <div class="col headersec ">
-                            <div class="headingmain pt-2 pb-2">
 
-                                <div>Student: <?php echo $username   ?></div>
-                                <div>Subject: <?php echo $subject   ?></div>
-                                <div>Class: <?php echo $class   ?></div>
+                        <div class="col headersec ">
+                            <div class="headingmain pt-3 pb-3">
+                                <div class="w-[10px]">
+                                    <div class="mb-1"><span class="bld"> Student:</span> <?php echo ucfirst($username)   ?></div>
+                                    <div class="mb-1"><span class="bld">Subject:</span> <?php echo ucwords($subject)   ?></div>
+                                    <div><span class="bld">Class:</span> <?php echo $class   ?></div>
+                                </div>
                             </div>
                         </div>
                         <div class=" p-5 questionpage">
@@ -69,7 +71,7 @@ $subject = $_SESSION['subject'];
     </div>
     <form action="query.php" method="post" class="row gy-3 ms-1">
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="answer[' . $datas['id'] . ']" value="' . $datas['optionA'] . '" id="optionA' . $key . '">
+            <input class="form-check-input" type="radio" name="answer[' . $datas['id'] . ']" value="' . ucwords($datas['optionA']) . '" id="optionA' . $key . '">
             <label class="form-check-label" for="optionA' . $key . '">' . $datas['optionA'] . '</label>
         </div>
         <div class="form-check">

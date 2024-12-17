@@ -1,9 +1,15 @@
 <?php
 
+unset($_SESSION['class']);
 unset($_SESSION['subject']);
 unset($_SESSION['question_count']);
 unset($_SESSION['attended']);
+unset($_SESSION['attended']);
+if (isset($_SESSION['question'])) {
+    unset($_SESSION['question']);
+}
 require("query.php");
+
 
 $attended =  $_SESSION['attended'];
 $count = $_SESSION['question_count'];
@@ -32,7 +38,7 @@ $totalmark = $_SESSION['total_mark'];
         <div class="row">
             <div class="col headersec">
                 <div class="headingmain">
-                    <h2>EXAM RESULTS</h2>
+                    <h2>EXAM RESULT</h2>
                 </div>
 
             </div>
@@ -44,6 +50,7 @@ $totalmark = $_SESSION['total_mark'];
 
 
                 <div class="container">
+
 
                     <!-- <div class="row  ">
                         <div class="col  ">
@@ -70,25 +77,29 @@ $totalmark = $_SESSION['total_mark'];
                         
                         
                             <div class="row gy-4 ">
-                                <div class="col col-md-12 col-lg-12 col-xl-12 col-xxl-12 name p-3">
+                                <div class="col col-md-12 col-lg-12 col-xl-12 col-xxl-12 name p-3 ps-4">
                                     <h5 class="textmaincolor">' . ucfirst($datas['username']) . '</h5>
-                                    <p class="textcolor">' . ucfirst($datas['subject']) . ' </p>
+                                    <p class="textcolor">' . ucwords($datas['subject']) . ' </p>
                                 </div>
-                                <div class="col col-md-12 col-xl-12 col-xxl-12 grade p-4">
+                                <div class="col col-md-12 col-xl-12 col-xxl-12 grade p-5 ">
 
-                                    <div class="row detailsmain">
+                                    <div class="row detailsmain ps-4 pt-2">
                                         <div class="col ">
                                             <h6 class="textcolor">Grade</h6>
                                             <h4 class="textmaincolor">' . $datas['grade'] . '</h4>
                                         </div>
                                         <div class="col">
                                             <h6 class="textcolor">Total score </h6>
-                                            <h4 class="textmaincolor">' . $datas['mark'] . '/' . $totalmark . '</h4>
+                                            <h4 class="textmaincolor">' ?><?php if (!$datas['mark'] == "") {
+                                                                                echo  $datas['mark'];
+                                                                            } else {
+                                                                                echo "0";
+                                                                            } ?> <?php echo '/' . $totalmark . '</h4>
                                         </div>
                                     </div>
 
 
-                                    <div class="row detailsmain">
+                                    <div class="row detailsmain ps-4 pt-4">
                                         <div class="col ">
                                             <h6 class="textcolor">Class</h6>
                                             <h4 class="textmaincolor">' . $datas['class'] . '</h4>
@@ -111,7 +122,7 @@ $totalmark = $_SESSION['total_mark'];
                             </div>
 
                              '; ?><?php if ($datas['percentage'] < 80) {
-                                        echo '<a href="../question" class="btn btn-primary mt-3" style="padding: 0.5rem 1rem; border-radius: 5px;">Retake Exam</a>';
+                                        echo '<a href="../index.php" class="btn btn-primary mt-3" style="padding: 0.5rem 1rem; border-radius: 5px;">Retake Exam</a>';
                                     } ?>
 
                     <?php echo ' <h5 class="textcolor mt-3">

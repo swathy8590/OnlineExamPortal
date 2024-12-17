@@ -10,6 +10,9 @@
 
     height: 100px;
     background: var(--heading-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .headingmain {
@@ -59,6 +62,7 @@
     height: 274px;
     background: var(--white);
     border-radius: 20px;
+    padding-left: 5rem !important;
 }
 
 

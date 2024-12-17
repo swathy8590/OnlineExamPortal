@@ -9,7 +9,15 @@
 
 <body>
     <div class="side-navbar active-nav d-flex  flex-wrap flex-column position-absolute   " id="sidebar">
-        <div class="logo">Test Your <span> Skill</span></div>
+        <!-- <div class="logo"><span>Edu</span><img src="../../images/photo.png" width="20%" /><span>Test</span> </div> -->
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="../../images/photo.png" alt="Owl Icon" />
+            </div>
+            <div class="logo-text">
+                <span class="logo-e">E</span>du <span class="logo-test">Test</span>
+            </div>
+        </div>
         <ul class="nav flex-column w-100 mt-1 ">
             <li>
                 <a href="../../pages/dashbord" class="nav-link  ">

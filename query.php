@@ -83,7 +83,7 @@ class UserLogin extends DBconn
 
                     header("location:question");
                 } else {
-                    $_SESSION['login_error'] = "The name, register number or class or subject is incorrect";
+                    $_SESSION['login_error'] = "The name, register number or class  is incorrect";
                     header("location:index.php");
                 };
             } catch (PDOException $e) {
