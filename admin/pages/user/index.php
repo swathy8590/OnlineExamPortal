@@ -46,6 +46,8 @@ $edit_data = $user->edit();
                  <div class="card mb-4 p-4">
       <div class="card-body">
                     <form action="query.php" method="post">
+                           <div style="text-align:right"><button type="submit" class="btn-close" name="close_btn" ></button></div>
+
                       <div class="mb-3">
                         <label class="small mb-1" for="name">Register_no</label>
                         <input class="form-control" id="name" type="text" name="reg_no" value="' . $data['reg_no'] . '">
