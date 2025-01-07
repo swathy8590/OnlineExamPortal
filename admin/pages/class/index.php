@@ -60,7 +60,10 @@ if (isset($_SESSION['dlt_message'])) {
               <div class="col-xl-8">
                  <div class="card mb-4 p-4">
                   <div class="card-body">
+
                     <form method="post" action="query.php">
+                           <div style="text-align:right"><button type="submit" class="btn-close" name="close_btn" ></button></div>
+
                       <!-- Form Row-->
                       <div class="row gx-3 mb-3">
                         <div class="col">

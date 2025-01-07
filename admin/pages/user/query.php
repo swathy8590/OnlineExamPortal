@@ -113,6 +113,10 @@ class User extends DBconn
                 echo $sql . "<br>" . $e->getMessage();
             }
         }
+
+        if (isset($_POST["close_btn"])) {
+            header("location:index.php");
+        }
     }
 
     public function delete()

@@ -59,9 +59,10 @@ $edit_data = $question->edit();
                   <div class="card-body">
                   <div  class="text-end">
                  
-                     <button type="button" class="btn-close" ></button>
+                   
                    </div>
                     <form action="query.php" method="post">
+                      <div style="text-align:right"><button type="submit" class="btn-close" name="close_btn" ></button></div>
                       <!-- Form Group (username)-->
                       <div class="mb-3">
                         <label class="small mb-1" for="Questions">Questions</label>

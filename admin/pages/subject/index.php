@@ -58,6 +58,7 @@ $edit_data = $sub->edit();
         
         <div class="card-body">
           <form method="post" action="query.php">
+                           <div style="text-align:right"><button type="submit" class="btn-close" name="close_btn" ></button></div>
             <div class="mb-3">
               <label class="small mb-1" for="answer">Subject Name</label>
               <input class="form-control" id="answer" type="text" name="subname" value="' . $data['subName'] . '">
