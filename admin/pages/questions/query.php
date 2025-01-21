@@ -64,8 +64,8 @@ class Question extends DBconn
             $this->optionC = $_POST['optionC'];
             $this->optionD = $_POST['optionD'];
             $this->answer = $_POST['answer'];
-            $this->subject = $_POST['subject'];
-            $this->class = $_POST['class'];
+            $this->subject = trim($_POST['subject']);
+            $this->class = trim($_POST['class']);
             $this->mark = $_POST['mark'];
 
             try {
@@ -128,8 +128,8 @@ class Question extends DBconn
             $this->e_optionC = $_POST['optionC'];
             $this->e_optionD = $_POST['optionD'];
             $this->e_answer = $_POST['answer'];
-            $this->e_subject = $_POST['subject'];
-            $this->e_class = $_POST['class'];
+            $this->e_subject = trim($_POST['subject']);
+            $this->e_class = trim($_POST['class']);
             $this->e_mark = $_POST['mark'];
 
 

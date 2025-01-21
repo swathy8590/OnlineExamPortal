@@ -64,7 +64,7 @@ class Question extends DBconn
 
 
         try {
-            $this->slctquestion = $this->conn->prepare("SELECT id FROM questionlist  WHERE class=$this->class AND subName='$this->subject' ORDER BY id DESC LIMIT 1");
+            $this->slctquestion = $this->conn->prepare("SELECT id FROM questionlist WHERE class=$this->class AND subName='$this->subject' ORDER BY id DESC LIMIT 1");
             $this->slctquestion->execute();
             $this->result = $this->slctquestion->setFetchMode(PDO::FETCH_ASSOC);
             $dd = $this->slctquestion->fetchAll();
@@ -136,7 +136,7 @@ class Question extends DBconn
                             $_SESSION['indx'] = $_SESSION['indx'] - 1;
                         } else {
 
-                            // unset($_SESSION['question']);
+                            unset($_SESSION['question']);
                         }
                     } catch (PDOException $e) {
                         echo "Error: " . $e->getMessage();
@@ -144,9 +144,6 @@ class Question extends DBconn
 
                     header("location:index.php");
                 } else {
-
-
-
 
                     try {
                         $this->slctquestion = $this->conn->prepare("SELECT COUNT( id) FROM questionlist WHERE subName='$this->subject' AND class=$this->class ");
@@ -172,8 +169,10 @@ class Question extends DBconn
                         $this->slctquestion->execute();
                         $this->result = $this->slctquestion->setFetchMode(PDO::FETCH_ASSOC);
                         $dd = $this->slctquestion->fetchAll();
+                        print_r($this->slctquestion->fetchAll());
                         $this->slctquestion =  $this->conn->prepare("SELECT FOUND_ROWS()");
                         $this->slctquestion->execute();
+
 
                         if ($this->slctquestion->fetchColumn()) {
 
@@ -587,8 +586,8 @@ class Question extends DBconn
                 } catch (PDOException $e) {
                     echo "Error: " . $e->getMessage();
                 }
-
                 unset($_SESSION['question']);
+
 
 
                 header("location:../result/index.php");

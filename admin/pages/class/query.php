@@ -22,7 +22,7 @@ class addclass extends DBconn
 
         if (isset($_POST['classub'])) {
 
-            $this->class = $_POST['class'];
+            $this->class = trim($_POST['class']);
             $this->insert = "INSERT INTO classlist (class)
            VALUES ($this->class)";
 
@@ -75,7 +75,7 @@ class addclass extends DBconn
 
             echo  $id = $_POST['cls_edit'];
 
-            $this->e_class = $_POST['class'];
+            $this->e_class = trim($_POST['class']);
 
 
             try {

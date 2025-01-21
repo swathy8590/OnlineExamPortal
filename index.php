@@ -4,8 +4,6 @@
 require('query.php');
 $data = $user->selectsub();
 
-
-
 $message = "";
 if (isset($_SESSION['pass_meassage'])) {
   $message =  $_SESSION['pass_meassage'];

@@ -102,7 +102,6 @@ $subject = $_SESSION['subject'];
                             } else {
                                 unset($_SESSION['question']);
 
-
                                 header("location:../index.php");
                             }
                             ?>

@@ -41,10 +41,10 @@ class UserLogin extends DBconn
 
         if (isset($_POST['submit'])) {
 
-            echo $this->reg_no = $_POST['reg_no'];
-            echo $this->name = $_POST['name'];
-            echo $this->class = $_POST['class'];
-            $this->subject = $_POST['subject'];
+            echo $this->reg_no = trim($_POST['reg_no']);
+            echo $this->name = trim($_POST['name']);
+            echo $this->class = trim($_POST['class']);
+            $this->subject = trim($_POST['subject']);
 
             try {
 
