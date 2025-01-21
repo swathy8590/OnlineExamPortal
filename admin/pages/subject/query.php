@@ -41,8 +41,8 @@ class Subject extends DBconn
         if (isset($_POST['save'])) {
 
             if (isset($_POST['subname']) && isset($_POST['class'])) {
-                $this->subname = $_POST['subname'];
-                $this->class = $_POST['class'];
+                $this->subname = trim($_POST['subname']);
+                $this->class = trim($_POST['class']);
 
                 $sql = "INSERT INTO `subjectlist` (subName, class)
             VALUES ('$this->subname', ' $this->class')";
